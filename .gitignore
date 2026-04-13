@@ -1,0 +1,30 @@
+# 虚幻引擎临时目录
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+FileOpenOrder/
+Content/
+
+# 编译生成的程序/日志
+*.pdb
+*.obj
+*.exe
+*.dll
+
+# IDE 配置文件 (重要！)
+.idea/
+.vs/
+.vscode/
+*.sln
+*.suo
+*.vc.db
+*.opensdf
+*.opendb
+*.sdf
+*.xcodeproj
+*.xcworkspace
+
+# 虚幻生成的脚本
+Script/
