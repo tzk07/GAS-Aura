@@ -25,7 +25,7 @@ void AAuraEffectActor::BeginPlay()
  * @param Target 效果的接收者
  * @param GameplayEffectClass 效果的创建模板 
  */
-void AAuraEffectActor::ApplyEffectToTarget(AActor* Target, TSubclassOf<UGameplayEffect> GameplayEffectClass)
+void AAuraEffectActor::ApplyEffectToTarget(AActor* TargetActor, TSubclassOf<UGameplayEffect> GameplayEffectClass)
 {
 	/*
 		IAbilitySystemInterface* ASCInterface = Cast<IAbilitySystemInterface>(Target);
@@ -38,7 +38,7 @@ void AAuraEffectActor::ApplyEffectToTarget(AActor* Target, TSubclassOf<UGameplay
 		}
 	*/
 	// 从 Target 上获取 ASC
-	UAbilitySystemComponent* TargetASC = UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(Target);
+	UAbilitySystemComponent* TargetASC = UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(TargetActor);
 	if (TargetASC == nullptr) return;
 	
 	check(GameplayEffectClass);
