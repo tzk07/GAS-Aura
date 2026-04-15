@@ -22,7 +22,7 @@ void AAuraEffectActor::BeginPlay()
 
 /**
  * 
- * @param Target 效果的接收者
+ * @param TargetActor 效果的接收者
  * @param GameplayEffectClass 效果的创建模板 
  */
 void AAuraEffectActor::ApplyEffectToTarget(AActor* TargetActor, TSubclassOf<UGameplayEffect> GameplayEffectClass)
