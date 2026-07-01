@@ -124,13 +124,13 @@ public:
 	FGameplayAttributeData CriticalHitResistance;
 	ATTRIBUTE_ACCESSORS(UAuraAttributeSet, CriticalHitResistance);
 	
-	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_HealthGeneration, Category = "Secondary Attributes")
-	FGameplayAttributeData HealthGeneration;
-	ATTRIBUTE_ACCESSORS(UAuraAttributeSet, HealthGeneration);
+	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_HealthRegeneration, Category = "Secondary Attributes")
+	FGameplayAttributeData HealthRegeneration;
+	ATTRIBUTE_ACCESSORS(UAuraAttributeSet, HealthRegeneration);
 	
-	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_ManaGeneration, Category = "Secondary Attributes")
-	FGameplayAttributeData ManaGeneration;
-	ATTRIBUTE_ACCESSORS(UAuraAttributeSet, ManaGeneration);
+	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_ManaRegeneration, Category = "Secondary Attributes")
+	FGameplayAttributeData ManaRegeneration;
+	ATTRIBUTE_ACCESSORS(UAuraAttributeSet, ManaRegeneration);
 	
 	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_MaxMana, Category = "Secondary Attributes")
 	FGameplayAttributeData MaxMana;
@@ -196,10 +196,10 @@ public:
 	void OnRep_CriticalHitResistance(const FGameplayAttributeData& OldCriticalHitResistance) const;
 	
 	UFUNCTION()
-	void OnRep_HealthGeneration(const FGameplayAttributeData& OldHealthGeneration) const;
+	void OnRep_HealthRegeneration(const FGameplayAttributeData& OldHealthGeneration) const;
 	
 	UFUNCTION()
-	void OnRep_ManaGeneration(const FGameplayAttributeData& OldManaGeneration) const;
+	void OnRep_ManaRegeneration(const FGameplayAttributeData& OldManaGeneration) const;
 	
 private:
 	void SetEffectProperties(const struct FGameplayEffectModCallbackData& Data, FEffectProperties& Props) const;

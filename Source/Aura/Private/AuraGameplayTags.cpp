@@ -58,8 +58,8 @@ void FAuraGameplayTags::InitializeNativeGameplayTags()
 		FString("Bonus damage added when a critical hit is scored")
 		);
 	
-	GameplayTags.Attributes_Secondary_CriticalHitResilience = UGameplayTagsManager::Get().AddNativeGameplayTag(
-		FName("Attributes.Secondary.CriticalHitResilience"), 
+	GameplayTags.Attributes_Secondary_CriticalHitResistance = UGameplayTagsManager::Get().AddNativeGameplayTag(
+		FName("Attributes.Secondary.CriticalHitResistance"), 
 		FString("Reduce Critical Hit Chance of attacking enemies")
 		);
 	
