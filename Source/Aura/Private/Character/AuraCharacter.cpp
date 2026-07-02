@@ -32,6 +32,7 @@ void AAuraCharacter::PossessedBy(AController* NewController)
 	
 	// Init ability actor info for the Server
 	InitAbilityActorInfo();
+	AddCharacterAbilities();
 }
 
 // 客户端使用，当服务器把 "这个 Pawn 属于哪个 PlayerState" 的信息同步给客户端时，客户端会触发它
